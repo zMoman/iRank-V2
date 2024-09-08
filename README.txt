@@ -18,10 +18,10 @@ Installation Instructions
 Follow these steps to set up the project locally:
 
 Clone the repository:
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/zMoman/iRank-V2.git
 
 Navigate to the project directory:
-cd your-repo-name
+cd iRank-V2
 
 Install project dependencies:
 npm install
