@@ -1,83 +1,251 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
+
+/* Main Title Styling */
+.main-header {
+    text-align: center;
+    padding: 30px 0;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+/* General Styles */
 html {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background: #0a0f1c;
+    color: #e0e0e0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
 }
 
+/* Animated Background Motion */
+body::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 10%, transparent 50%);
+    animation: moveBackground 20s linear infinite;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+}
+
+@keyframes moveBackground {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Cursor-Following Effect */
+#cursor-effect {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgba(0, 123, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease-out;
+    z-index: 10000;
+}
+
+/* Container */
 .container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
+/* Recipes Section */
 #recipes {
     text-align: justify;
 }
 
+/* Recipe Card */
 .recipe {
     width: 30%;
     display: inline-block;
-    border: 1px solid grey;
+    border: 1px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
     margin: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
 }
 
+.recipe:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Recipe Image */
 .recipe img {
     width: 100%;
     height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #333;
 }
 
+/* Headings */
 h2 {
     text-align: center;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 15px;
 }
 
+/* Links */
 a {
     text-decoration: none;
-    color: inherit;
+    color: #009dff;
+    transition: color 0.3s;
 }
 
-a:focus {
-    text-decoration: none;
+a:hover {
+    color: #66ccff;
 }
 
-.wrapper {
-    text-align: center;
-}
-
+/* Buttons */
 button {
-    height: 35px;
+    height: 40px;
+    padding: 10px 20px;
     color: white;
-    background-color: lightskyblue;
-    font-family: 'Roboto', sans-serif;
+    background-color: #007bff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Input Fields */
 input {
-    padding-bottom: 7px;
-    padding-top: 7px;
-    padding-left: 5px;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #111;
+    color: #fff;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1rem;
 }
 
+input:focus {
+    outline: none;
+    border-color: #009dff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.6);
+}
+
+/* Tables */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #444;
     text-align: left;
-    padding: 8px;
+    padding: 12px;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
 }
 
 td img {
     width: 50px;
     height: auto;
+    border-radius: 5px;
 }
 
+/* Wrapper for Centering Elements */
+.wrapper {
+    text-align: center;
+}
+
+/* Sections */
 .input_area, #playlist_area, #search_results {
     margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+#registerForm {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    width: 320px;  /* Adjusted fixed width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#registerForm input {
+    width: 100%;         /* Makes all inputs the same width */
+    max-width: 250px;    /* Ensures uniform width */
+    padding: 10px;
+    margin: 8px 0;      /* Even spacing between fields */
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+#registerForm button {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#registerForm button:hover {
+    background: #0056b3;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .recipe {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
