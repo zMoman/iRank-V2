@@ -34,16 +34,12 @@ Start the server:
 npm start
 
 Open your browser and navigate to:
-Main App: http://localhost:3000/
-User List: http://localhost:3000/users
+Main App: http://localhost:5000/
 
 Testing Instructions
 You can test the app by running it on your local machine and interacting with the following routes:
 Homepage:
-http://localhost:3000/
-
-User Route:
-http://localhost:3000/users
+http://localhost:5000/
 
 Demo Video
 
