@@ -113,8 +113,8 @@ app.listen(PORT, err => {
     if (err) console.log(err);
     else {
         console.log(`Server listening on port: ${PORT}`);
-        console.log("http://localhost:3000/")
-        console.log("http://localhost:3000/users")
+        console.log(`http://localhost:${PORT}/`)
+        console.log(`http://localhost:${PORT}/users`)
 
     }
 });
